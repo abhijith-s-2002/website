@@ -1,0 +1,129 @@
+@import '../../vars.css';
+
+.teamContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px;
+    background: linear-gradient(135deg, #1b1f23, #0e141b);
+  }
+  
+  .title {
+    font-size: 36px; /* Increase font size for emphasis */
+    font-weight: 700; /* Bold weight for strong presence */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Make the title all uppercase for a modern look */
+    letter-spacing: 2px; /* Add some spacing between letters */
+    margin-top: 70px;
+    margin-bottom: 40px; /* Add space below the title */
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #00b496, #1b1f23); /* Gradient color */
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Makes the gradient show through the text */
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #00b496; /* Accent color under the title */
+    margin: 20px auto 0;
+  }
+  
+
+  .card {
+    position: relative;
+    background: rgba(50, 50, 50, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    height: 500px; /* Adjust height for better fit */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: hoverFloat 3s ease-in-out infinite;
+  }
+  
+  .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px rgba(0, 180, 150, 0.3);
+  }
+  
+  @keyframes hoverFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -75%;
+    left: -75%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 180, 150, 0.05);
+    transform: rotate(45deg);
+    transition: 0.75s;
+    z-index: 0;
+  }
+  
+  .card:hover::before {
+    top: -50%;
+    left: -50%;
+    transform: rotate(0deg);
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: grayscale(30%) contrast(85%);
+    transition: filter 0.4s;
+  }
+  
+  .image:hover {
+    filter: grayscale(0%) contrast(100%);
+  }
+  
+  .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(49, 49, 49, 0.6); /* Dark overlay for better text readability */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 12px 12px; /* Bottom rounded corners */
+  }
+  
+  .name {
+    color: #e0e0e0; /* Light gray for the name */
+    font-size: 24px;
+    font-weight: 600;
+    margin: 12px 0;
+  }
+  
+  .role {
+    color: #00b496;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    color: #a0a0a0; /* Muted gray for description text */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  

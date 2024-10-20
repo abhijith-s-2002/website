@@ -1,0 +1,156 @@
+.eventSectiion {
+    padding: 50px;
+    background-color: #1a1a1a; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line */
+    justify-content: center; /* Centers cards within the container */
+    gap: 20px; /* Adds space between the cards */
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e0e0e0; /* Stealthy light grey */
+}
+
+.animationContainer {
+    width: 15%;
+    align-items: end;
+    z-index: 1;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #111; /* Dark background for the card */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Softer, dark shadow */
+    flex: 1 1 300px; /* Allows the card to grow, shrink, and wrap */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover .content {
+    opacity: 1; /* Reveal content on hover */
+}
+
+.card:hover .img {
+    opacity: 0.85; /* Slight opacity change on hover */
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for content */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: #e0e0e0; /* Light grey text for stealthy theme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire card */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #f2f2f2; /* Light color for title */
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3; /* Dark blue for stealthy accent */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.link:hover {
+    background-color: #004494; /* Slight hover effect for the button */
+}
+
+/* Other styles remain unchanged... */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .eventSectiion {
+        padding: 30px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .link {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .content h2 {
+        font-size: 1.3rem;
+    }
+
+    .content p {
+        font-size: 0.8rem;
+    }
+
+    .link {
+        padding: 6px 12px;
+    }
+}

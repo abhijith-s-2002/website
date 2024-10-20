@@ -1,0 +1,139 @@
+/* GalShot.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background-color: rgb(34, 34, 37);
+    margin-bottom: 100px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #2d2f31;
+}
+
+.innercol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the container */
+    margin-right: 20px; /* Space between text and animation */
+    flex: 1; /* Allow text content to take up available space */
+}
+
+.h3 {
+    font-size: 1.8rem;
+    color: #f7eeee;
+    margin-bottom: 10px;
+}
+
+.p {
+    flex-direction: column;
+    font-size: 1rem;
+    color: #958a8a;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.link:hover {
+    background-color: #0056b3;
+}
+
+.animationContainer {
+    width: 400px; /* Set a fixed width for the animation */
+    display: flex;
+    
+}
+.AnimationContainer{
+    width: 30%;
+    align-items: end;
+    z-index: 1;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@media screen and (max-width: 830px) {
+    .inner {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align content */
+    }
+
+    .innercol {
+        margin-right: 0; /* Remove the margin to avoid unwanted spacing */
+        align-items: center; /* Center align text content */
+    }
+
+    .animationContainer {
+        width: 100%; /* Allow animation to take full width on smaller screens */
+        max-width: 400px; /* Limit the maximum width of the animation */
+        margin-top: 20px; /* Add space between the text and animation */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Slightly smaller font for heading */
+    }
+
+    p {
+        display: none;
+    }
+
+    .link {
+        padding: 8px 16px; /* Slightly smaller padding for the button */
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 830px) {
+    .inner {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align content */
+    }
+
+    .innercol {
+        margin-right: 0; /* Remove the margin to avoid unwanted spacing */
+        align-items: center; /* Center align text content */
+    }
+
+    .animationContainer {
+        display: flex;
+        width: 100%; /* Allow animation to take full width on smaller screens */
+        max-width: 400px; /* Limit the maximum width of the animation */
+        margin-top: 20px; /* Add space between the text and animation */
+        align-items: center;
+        justify-content: center;
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Slightly smaller font for heading */
+    }
+
+    p {
+        font-size: 0.9rem; /* Slightly smaller font for paragraph */
+    }
+
+    .link {
+        padding: 8px 16px; /* Slightly smaller padding for the button */
+        font-size: 0.9rem;
+    }
+}

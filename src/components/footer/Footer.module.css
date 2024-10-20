@@ -1,0 +1,74 @@
+@import '../../vars.css';
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 100px 60px; /* Adjust padding as needed */
+    background-color: black;
+}
+
+.topLinkContainer {
+    display: flex;
+    justify-content: center; /* Center the link horizontally */
+    align-items: center; /* Center the link vertically */
+    padding: 10px;
+    margin-bottom: 20px; /* Add space below the top link */
+}
+
+.topLink {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    font: var(--font-roboto);
+    background-color: white;
+    display: flex; /* Ensure link content is aligned */
+    align-items: center; /* Align the text and image vertically */
+}
+
+.arrow {
+    margin-right: 10px; /* Space between image and text */
+    width: 17px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.link {
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Align icons vertically */
+    gap: 15px; /* Space between icons */
+}
+
+.icons {
+    width: 60px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+}
+
+.icons:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.copyright {
+    margin-top: 20px; /* Space above the copyright text */
+    color: white; /* Text color */
+    text-align: center; /* Center-align the text */
+    font-size: 14px; /* Font size */
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        padding: 80px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .topLink {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px 15px; /* Adjust padding */
+    }
+
+    .icons {
+        width: 40px; /* Smaller icons for smaller screens */
+    }
+    
+}
